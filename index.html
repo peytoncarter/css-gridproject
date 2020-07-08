@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.item1 { grid-column: 1/ span 8; }
+.item2 { grid-column: 1/ span 2; }
+.item3 { grid-column: 1/ span 2; }
+.item4 { grid-column: 1/6; }
+.item5 { grid-column: 6/ span 3 ; }
+.item6 {grid-column: 1/ span 8; }
+.item7 {grid-area: 2 / 3 / 4 / 9}
+
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  background-color: #8A2BE2;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: #48D1CC;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="item1">sunday</div>
+  <div class="item2">monday</div>
+  <div class="item3">tuesday</div>
+  <div class="item4">wednesday</div>
+  <div class="item5">thursday</div>
+  <div class="item6">friday</div>
+  <div class="item7">saturday</div>
+</div>
+
+
+<div class="grid-container">
+  <div class="grid-item">A</div>
+  <div class="grid-item">B</div>
+  <div class="grid-item">C</div>
+  <div class="grid-item">D</div>
+  <div class="grid-item">E</div>
+  <div class="grid-item">F</div>
+  <div class="grid-item">G</div>
+  <div class="grid-item">H</div>
+  <div class="grid-item">I</div>
+  <div class="grid-item">J</div>
+  <div class="grid-item">K</div>
+  <div class="grid-item">L</div>
+  <div class="grid-item">M</div>
+  <div class="grid-item">N</div>
+  <div class="grid-item">O</div>
+  <div class="grid-item">P</div>
+  <div class="grid-item">Q</div>
+  <div class="grid-item">R</div>
+  <div class="grid-item">S</div>
+  <div class="grid-item">T</div>
+  <div class="grid-item">U</div>
+  <div class="grid-item">V</div>
+  <div class="grid-item">W</div>
+  <div class="grid-item">X</div>
+  <div class="grid-item">Y</div>
+  <div class="grid-item">Z</div>
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sas-serif, Helvetica, sans-serif;
+}
+
+.header {
+  grid-area: header;
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'left middle middle middle middle right'
+    'footer footer footer footer footer footer';
+
+}
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+  height: 300px;
+}
+
+.left {
+  grid-area: left;
+}
+
+.middle {
+  grid-area: middle;
+}
+
+.right {
+  grid-area: right;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas:
+      'header header header header header header'
+      'left left left left left left'
+      'middle middle middle middle middle middle'
+      'right right right right right right'
+      'footer footer footer footer footer footer';
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="header">
+    <h2>Lists</h2>
+  </div>
+
+  <div class="left" style="background-color:#aaa;">Colors
+    <ul>
+      <li> blue </li>
+      <li> green </li>
+      <red> red </li>
+     </ul>
+  </div>
+  <div class="middle" style="background-color:#bbb;">Animals
+   <ul>
+    <li> Panda</li>
+    <li> Dog</li>
+    <li> Cat</li>
+    </ul>
+    </div>
+  <div class="right" style="background-color:#ccc;">Shapes
+    <ul>
+      <li> Triangle</li>
+      <li> Square</li>
+      <li> Rectangle</li>
+  </div>
+
+  <div class="footer">
+    <p>The End!</p>
+  </div>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  grid-area: header;
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'left left middle middle right right'
+    'footer footer footer footer footer footer';
+
+}
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+  height: 300px;
+}
+
+.left {
+  grid-area: left; color: #f2f2f2;
+}
+
+.middle {
+  grid-area: middle;
+}
+
+.right {
+  grid-area: right;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas:
+      'header header header header header header'
+      'left left left left left left'
+      'middle middle middle middle middle middle'
+      'right right right right right right'
+      'footer footer footer footer footer footer';
+  }
+}
+</style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
